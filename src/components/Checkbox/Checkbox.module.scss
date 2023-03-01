@@ -1,0 +1,32 @@
+.checkbox {
+
+  &__input {
+    display: none;
+  }
+
+  &__check {
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px solid cornflowerblue;
+
+    &:after {
+      display: none;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: brown;
+    }
+  }
+
+  &__input:checked + &__check:after {
+    display: block;
+  }
+}
+
